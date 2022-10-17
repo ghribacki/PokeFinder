@@ -70,12 +70,9 @@ std::vector<EggState> EggGenerator8::generate(u64 seed0, u64 seed1) const
             // Nidoran, Illumise/Volbeat, Indeedee
             if (daycare.getNidoranVolbeat())
             {
-                // gen.next(2);
-                // Handle display result later
-                gen.next();
+                state.setGender(gen.next(2));
             }
-
-            if (genderRatio == 255)
+            else if (genderRatio == 255)
             {
                 state.setGender(2);
             }
